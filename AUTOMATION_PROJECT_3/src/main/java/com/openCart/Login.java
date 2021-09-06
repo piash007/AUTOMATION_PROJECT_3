@@ -39,7 +39,7 @@ public class Login extends TestBase {
         email.sendKeys(prop.getProperty("RandomEmail"));
 
         WebElement password= driver.findElement(By.name("password"));
-        password.sendKeys("1234567");
+        password.sendKeys(prop.getProperty("RandomPass"));
 
         WebElement login_btn= driver.findElement(By.cssSelector("#content > div > div:nth-child(2) > div > form > input"));
         login_btn.click();
