@@ -35,7 +35,9 @@ public class TestBase {
             salt.append(SALTCHAR.charAt(index));
         }
         String saltStar= salt.toString().concat("@gmail.com");
+        String saltpass= salt.toString();
         prop.setProperty("RandomEmail",saltStar);
+        prop.setProperty("RandomPass",saltpass);
         prop.store(fis,null);
         return saltStar;
 
