@@ -54,10 +54,10 @@ public class Registration extends TestBase {
         telephone.sendKeys("01677520375");
 
         WebElement password= driver.findElement(By.name("password"));
-        password.sendKeys("1234567");
+        password.sendKeys(prop.getProperty("RandomPass"));
 
         WebElement con_password= driver.findElement(By.name("confirm"));
-        con_password.sendKeys("1234567");
+        con_password.sendKeys(prop.getProperty("RandomPass"));
 
         WebElement con_btn= driver.findElement(By.cssSelector("#content > form > div > div > input.btn.btn-primary"));
         con_btn.click();
